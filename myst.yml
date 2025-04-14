@@ -11,7 +11,7 @@ project:
     - id: output-pdf
   exports:
     - format: pdf
-      template: plain_latex_book 
+      template: ./template
       output: exports/document.pdf
       id: output-pdf
   # To autogenerate a Table of Contents, run "myst init --write-toc"
