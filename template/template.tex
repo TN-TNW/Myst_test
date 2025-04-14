@@ -15,13 +15,13 @@
 
 % Own environments
 
-\newcounter{assignment}[chapter]
-\renewcommand{\theassignment}{\thechapter.\arabic{assignment}}
+\newcounter{exercise}[chapter]
+\renewcommand{\theexercise}{\thechapter.\arabic{exercise}}
 
-\newenvironment{assignment}[1][]{
-  \refstepcounter{assignment}
+\newenvironment{exercise}[1][]{
+  \refstepcounter{exercise}
   \begin{framed}
-  \textbf{Opdracht~\theassignment} \ifx\\#1\\\else~--~#1\fi
+  \textbf{Opdracht~\theexercise} \ifx\\#1\\\else~--~#1\fi
   \par
 }{
   \end{framed}
