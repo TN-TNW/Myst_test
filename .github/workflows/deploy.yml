@@ -37,15 +37,20 @@ jobs:
       - name: Install MyST Markdown
         run: npm install -g mystmd
         
-      # pdf assets
+      # pdf 
+      #- uses: typst-community/setup-typst@v4 # for lapreprint-typst pdf (in myst.yml)
+
       - name: Setup TeX Live
         uses: teatimeguest/setup-texlive-action@v3
         with:
           packages: |
             scheme-basic
+            xetex
             hyperref
             microtype
             latexmk
+          # scheme-full # if above fails
+  
 
       - name: Build PDF Assets
         run: myst build --pdf
