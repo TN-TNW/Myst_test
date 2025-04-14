@@ -52,7 +52,7 @@ jobs:
             caption
             xcolor
             changepage
-            amssyb
+            amsfonts
             enumitem
   
       - name: Build PDF Assets
