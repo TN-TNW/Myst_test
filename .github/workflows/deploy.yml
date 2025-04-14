@@ -35,7 +35,16 @@ jobs:
         with:
           node-version: 18.x
       - name: Install MyST Markdown
-        run: npm install -g mystmd
+        run: npm install -g 
+        
+      # pdf assets
+
+      - uses: actions/checkout@v4
+      - uses: typst-community/setup-typst@v4
+      # 🎉 Now Typst is installed!
+      - run: typst compile paper.typ paper.pdf
+
+
       - name: Build PDF Assets
         run: myst build --pdf
       - name: Build HTML Assets
