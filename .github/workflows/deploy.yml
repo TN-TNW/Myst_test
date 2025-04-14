@@ -51,6 +51,7 @@ jobs:
             microtype
             caption
             xcolor
+            changepage
   
 
       - name: Build PDF Assets
