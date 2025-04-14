@@ -38,10 +38,9 @@ jobs:
         run: npm install -g mystmd
         
       # pdf assets
-
-      - uses: actions/checkout@v4
+      # - uses: actions/checkout@v4
       - uses: typst-community/setup-typst@v4
-      - run: typst compile paper.typ paper.pdf
+      # - run: typst compile paper.typ paper.pdf
 
 
       - name: Build PDF Assets
