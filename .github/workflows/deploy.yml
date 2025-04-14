@@ -50,6 +50,7 @@ jobs:
             hyperref
             microtype
             caption
+            xcolor
   
 
       - name: Build PDF Assets
