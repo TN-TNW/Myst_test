@@ -44,7 +44,12 @@ jobs:
         uses: teatimeguest/setup-texlive-action@v3
         with:
           packages: |  
-            scheme-full   
+            scheme-basic
+            xetex
+            latexmk
+            hyperref
+            microtype
+            caption
   
 
       - name: Build PDF Assets
