@@ -2,16 +2,16 @@
 version: 1
 project:
   id: d2c15031-cac1-48b9-9be0-705b0ae31f98
-  # title:
+  title: Test file
   # description:
   # keywords: []
-  # authors: []
+  authors: [Freek]
   # github:
   downloads:
     - id: output-pdf
   exports:
     - format: pdf
-      template: lapreprint-typst
+      template: plain_latex_book
       output: exports/document.pdf
       id: output-pdf
   # To autogenerate a Table of Contents, run "myst init --write-toc"
