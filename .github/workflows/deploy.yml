@@ -41,7 +41,6 @@ jobs:
 
       - uses: actions/checkout@v4
       - uses: typst-community/setup-typst@v4
-      # 🎉 Now Typst is installed!
       - run: typst compile paper.typ paper.pdf
 
 
