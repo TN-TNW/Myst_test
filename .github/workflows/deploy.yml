@@ -43,13 +43,8 @@ jobs:
       - name: Setup TeX Live
         uses: teatimeguest/setup-texlive-action@v3
         with:
-          packages: |
-            scheme-basic
-            xetex
-            hyperref
-            microtype
-            latexmk
-          # scheme-full # if above fails
+          packages: |  
+            scheme-full   
   
 
       - name: Build PDF Assets
