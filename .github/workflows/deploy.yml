@@ -38,10 +38,14 @@ jobs:
         run: npm install -g mystmd
         
       # pdf assets
-      # - uses: actions/checkout@v4
-      - uses: typst-community/setup-typst@v4
-      # - run: typst compile paper.typ paper.pdf
-
+      - name: Setup TeX Live
+        uses: teatimeguest/setup-texlive-action@v3
+        with:
+          packages: |
+            scheme-basic
+            hyperref
+            microtype
+            latexmk
 
       - name: Build PDF Assets
         run: myst build --pdf
