@@ -52,8 +52,9 @@ jobs:
             caption
             xcolor
             changepage
+            amssyb
+            enumitem
   
-
       - name: Build PDF Assets
         run: myst build --pdf
       - name: Build HTML Assets
