@@ -28,3 +28,10 @@ site:
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png
+
+directives:
+  exercise:
+    latex: |
+      \begin{exercise}{{{ title | default("Oefening") }}}
+      {{ body }}
+      \end{exercise}

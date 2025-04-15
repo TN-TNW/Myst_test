@@ -53,12 +53,3 @@ packages:
   - fontawesome5
   - tcolorbox
 
-substitutions:
-  "{fa}`rocket`": "\\faRocket{}"
-
-directives:
-  exercise:
-    latex: |
-      \begin{exercise}{{{ title | default("Oefening") }}}
-      {{ body }}
-      \end{exercise}
