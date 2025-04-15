@@ -32,22 +32,19 @@
 % Own environments
 \newcommand{\faRocket}{🚀}
 
-\newcounter{exercise}
-\renewcommand{\theexercise}{\arabic{exercise}}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
 
-\newenvironment{exercise}[1][]{
-  \refstepcounter{exercise}
-  \begin{framed}
-  \noindent\textbf{Opdracht~\theexercise}%
-  \ifx\\#1\\%
-    \relax%
-  \else
-    ~--~#1%
-  \fi
-  \par
-}{
-  \end{framed}
+\newtcolorbox{exercise}[1]{%
+  breakable,
+  title={#1},
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  fonttitle=\bfseries,
+  boxed title style={colback=blue!20!white},
 }
+
+% einde
 
 % Style quotes
 \definecolor{darkblue}{rgb}{0.0, 0.0, 0.55}

@@ -57,6 +57,7 @@ jobs:
             framed
             booktabs
             fontawesome5
+            tcolorbox
   
       - name: Build PDF Assets
         run: myst build --pdf
