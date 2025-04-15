@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt,oneside]{book}
+\documentclass[a4paper,15pt,oneside]{book}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -13,22 +13,6 @@
 \bibliographystyle{abbrvnat}
 
 
-% Own environments
-
-\newcounter{exercise}[chapter]
-\renewcommand{\theexercise}{\thechapter.\arabic{exercise}}
-
-\newenvironment{exercise}[1][]{
-  \refstepcounter{exercise}
-  \begin{framed}
-  \textbf{Opdracht~\theexercise} \ifx\\#1\\\else~--~#1\fi
-  \par
-}{
-  \end{framed}
-}
-
-
-
 % Make list items more compact
 \usepackage{enumitem}
 \setlist[itemize]{noitemsep, topsep=0pt}
@@ -40,6 +24,25 @@
   linkcolor={black},
   citecolor={black},
   urlcolor={black}
+}
+
+% Own environments
+
+\newcounter{exercise}
+\renewcommand{\theexercise}{\arabic{exercise}}
+
+\newenvironment{exercise}[1][]{
+  \refstepcounter{exercise}
+  \begin{framed}
+  \noindent\textbf{Opdracht~\theexercise}%
+  \ifx\\#1\\%
+    \relax%
+  \else
+    ~--~#1%
+  \fi
+  \par
+}{
+  \end{framed}
 }
 
 % Style quotes
