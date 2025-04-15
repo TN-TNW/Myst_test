@@ -54,6 +54,8 @@ jobs:
             changepage
             amsfonts
             enumitem
+            framed
+            booktabs
   
       - name: Build PDF Assets
         run: myst build --pdf
