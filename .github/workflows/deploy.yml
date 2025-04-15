@@ -56,6 +56,7 @@ jobs:
             enumitem
             framed
             booktabs
+            fontawesome5
   
       - name: Build PDF Assets
         run: myst build --pdf
