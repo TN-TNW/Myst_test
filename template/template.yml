@@ -52,3 +52,5 @@ packages:
   - amssymb
   - fontawesome5
 
+substitutions:
+  "{fa}`rocket`": "\\faRocket{}"
