@@ -25,6 +25,7 @@ project:
     - file: test.md
     - file: H2.md
     - file: H1.md
+    - file: test2.ipynb
     
 site:
   template: book-theme
