@@ -44,6 +44,15 @@
   boxed title style={colback=blue!20!white},
 }
 
+
+\newcounter{exercise}[chapter]
+\newenvironment{exercise}[1][]{
+  \refstepcounter{exercise}
+  \begin{framed}
+  \noindent\textbf{Exercise~\theexercise\ (#1)}\par
+}{
+  \end{framed}
+}
 % einde
 
 % Style quotes
