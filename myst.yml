@@ -8,13 +8,13 @@ project:
   authors: [Freek]
   abstract: Test programma voor eigen LaTeX template
   # github:
-  # downloads:
-  #   - id: output-pdf
-  # exports:
-  #   - format: pdf
-  #     template: ./template
-  #     output: exports/document.pdf
-  #     id: output-pdf
+  downloads:
+    - id: output-pdf
+  exports:
+    - format: pdf
+      template: ./template
+      output: exports/document.pdf
+      id: output-pdf
 
   jupyter: true
    # lite: true
@@ -26,7 +26,13 @@ project:
     - file: H2.md
     - file: H1.md
     - file: test2.ipynb
-    
+
+directives:
+  exercise:
+    latex: |
+      \begin{exercise}{{{ title | default("Oefening") }}}
+      {{ body }}
+      \end{exercise}    
 site:
   template: book-theme
   # options:
