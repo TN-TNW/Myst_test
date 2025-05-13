@@ -59,6 +59,19 @@ jobs:
             fontawesome5
             tcolorbox
             pdfcol
+            adjustbox            
+            varwidth  
+            ulem       
+            titlesec   
+            amsmath    
+            fancyvrb  
+            nicefrac
+            float
+            datetime
+            fmtcount
+            doi
+      
+
   
       - name: Build PDF Assets
         run: myst build --pdf
