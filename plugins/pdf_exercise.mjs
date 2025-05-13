@@ -31,9 +31,14 @@ const exerciseTransform = {
         }
         if (node.type === "solution") {
           console.log("[solution plugin] replacing a solution inside the pdf");
+
+          const label = node.label;
+          const exNum = labelMap.get(label) || "??";
           
           node.type = "admonition";
           node.kind = "tip";
+
+          node.title = `Solution to Exercise ${exNum}`;
         }
       });
     }
