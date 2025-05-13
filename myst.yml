@@ -29,12 +29,5 @@ project:
     - file: H1.md
     - file: H2.md
 
-myst:
-  directives:
-    exercise:
-      latex: |
-        \begin{exercise}{{{ title | default("Oefening") }}}
-        {{ body }}
-        \end{exercise}    
 site:
   template: book-theme
