@@ -68,15 +68,18 @@ jobs:
             nicefrac
             float
             datetime
+            fmtcount
       
 
   
       - name: Build PDF Assets
         run: myst build --pdf
-      - name: Check for Missing Packages
+      - name: Check if build folder exists
         run: |
-          echo "🔍 Checking for missing LaTeX packages..."
-          grep "File .* not found" _build/temp/*/document.log | awk -F "'" '{print $2}' | sort | uniq
+          if [ ! -d "_build/pdf" ]; then
+            echo "Build folder does not exist. Exiting."
+            exit 1
+          fi
       - name: Build HTML Assets
         run: myst build --html
       - name: Upload artifact
