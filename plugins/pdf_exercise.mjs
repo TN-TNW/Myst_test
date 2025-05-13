@@ -23,11 +23,13 @@ const exerciseTransform = {
 
           const label = node.label || `exercise-${index + 1}`;
           const number = index + 1;
+          const originalTitle = node.title || "Untitled exercise";
+          
           labelMap.set(label, number);
 
           node.type = "admonition";
-          node.kind = "note";
-          node.title = `Exercise ${number}`;
+          node.kind = "note";          
+          node.title = `Exercise ${number}: ${originalTitle}`;
         }
         if (node.type === "solution") {
           console.log("[solution plugin] replacing a solution inside the pdf");
