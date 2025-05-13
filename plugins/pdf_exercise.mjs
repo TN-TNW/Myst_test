@@ -11,6 +11,7 @@ const exerciseTransform = {
   plugin: (opts, utils) => (tree) => {
     // Detect if we are building a PDF
     const isPDF = process.argv.some(arg => arg.includes("pdf"));
+    const labelMap = new Map();
 
     if (isPDF) {
       // Only process the main document's children
@@ -19,13 +20,19 @@ const exerciseTransform = {
       rootChildren.forEach((node, index) => {
         if (node.type === "exercise") {
           console.log("[exercise plugin] replacing an exercise inside the pdf");
+
+          const label = node.label || `exercise-${index + 1}`;
+          const nummer = index + 1;
+          labelMap.set(label, nummer);
+
           node.type = "admonition";
           node.kind = "note";
+          node.title = "Exercise ${nummer}`;"
         }
         if (node.type === "solution") {
           console.log("[solution plugin] replacing an exercise inside the pdf");
           node.type = "admonition";
-          node.kind = "note";
+          node.kind = "tip";
         }
       });
     }
