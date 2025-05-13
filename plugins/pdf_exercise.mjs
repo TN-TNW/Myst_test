@@ -30,9 +30,20 @@ const exerciseTransform = {
           
           labelMap.set(label, number);
 
+          // Create the numbered title node
+          const titleNode = {
+            type: "paragraph",
+            children: [{
+              type: "text",
+              value: `Exercise ${number}: ${originalTitle}`
+            }]
+          };
+
+          // Convert to admonition with explicit title node
           node.type = "admonition";
-          node.kind = "note";          
-          node.title = `Exercise ${number}: ${originalTitle}`;
+          node.kind = "note";
+          // Add the title node at the start of the children array
+          node.children = [titleNode, ...(node.children || [])];
         }
         
         if (node.type === "solution") {
@@ -41,9 +52,19 @@ const exerciseTransform = {
           const label = node.label;
           const exNum = labelMap.get(label) || "??";
           
+          // Create the numbered solution title node
+          const titleNode = {
+            type: "paragraph",
+            children: [{
+              type: "text",
+              value: `Solution to Exercise ${exNum}`
+            }]
+          };
+
           node.type = "admonition";
           node.kind = "tip";
-          node.title = `Solution to Exercise ${exNum}`;
+          // Add the title node at the start of the children array
+          node.children = [titleNode, ...(node.children || [])];
         }
       };
 
