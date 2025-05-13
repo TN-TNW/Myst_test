@@ -59,7 +59,12 @@ jobs:
             fontawesome5
             tcolorbox
             pdfcol
-            adjustbox
+            adjustbox            
+            varwidth  
+            ulem       
+            titlesec   
+            amsmath    
+            fancyvrb  
 
   
       - name: Build PDF Assets
