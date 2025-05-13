@@ -65,6 +65,7 @@ jobs:
             titlesec   
             amsmath    
             fancyvrb  
+            nicefrac
 
   
       - name: Build PDF Assets
