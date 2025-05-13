@@ -66,6 +66,7 @@ jobs:
             amsmath    
             fancyvrb  
             nicefrac
+            float
 
   
       - name: Build PDF Assets

@@ -18,8 +18,7 @@ const exerciseTransform = {
       
       rootChildren.forEach((node, index) => {
         if (node.type === "exercise") {
-          console.log(node);
-          console.log("[exercise plugin] replacing exercise");
+          console.log("[exercise plugin] replacing an exercise inside the pdf");
           node.type = "admonition";
           node.kind = "note";
         }
