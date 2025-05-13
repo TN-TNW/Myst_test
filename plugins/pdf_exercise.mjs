@@ -27,7 +27,7 @@ const exerciseTransform = {
 
           node.type = "admonition";
           node.kind = "note";
-          node.title = "Exercise ${number}`;"
+          node.title = `Exercise ${number}`;"
         }
         if (node.type === "solution") {
           console.log("[solution plugin] replacing an exercise inside the pdf");
