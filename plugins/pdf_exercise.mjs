@@ -35,7 +35,7 @@ const exerciseTransform = {
             type: "paragraph",
             children: [{
               type: "text",
-              value: `Exercise ${number}: ${node.title}`
+              value: `Exercise ${number}:`
             }]
           };
 
