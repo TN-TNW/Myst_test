@@ -22,6 +22,11 @@ const exerciseTransform = {
           node.type = "admonition";
           node.kind = "note";
         }
+        if (node.type === "solution") {
+          console.log("[solution plugin] replacing an exercise inside the pdf");
+          node.type = "admonition";
+          node.kind = "note";
+        }
       });
     }
   },
