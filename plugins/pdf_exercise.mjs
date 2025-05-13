@@ -22,15 +22,16 @@ const exerciseTransform = {
           console.log("[exercise plugin] replacing an exercise inside the pdf");
 
           const label = node.label || `exercise-${index + 1}`;
-          const nummer = index + 1;
-          labelMap.set(label, nummer);
+          const number = index + 1;
+          labelMap.set(label, number);
 
           node.type = "admonition";
           node.kind = "note";
-          node.title = "Exercise ${nummer}`;"
+          node.title = "Exercise ${number}`;"
         }
         if (node.type === "solution") {
           console.log("[solution plugin] replacing an exercise inside the pdf");
+          
           node.type = "admonition";
           node.kind = "tip";
         }
