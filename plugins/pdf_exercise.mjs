@@ -50,7 +50,7 @@ const exerciseTransform = {
           console.log("[solution plugin] replacing a solution inside the pdf");
 
           // const label = node.label;
-          const label = node.title;
+          const label = node.arguments?.[0] || "??";
           const exNum = labelMap.get(label) || "??";
           
           // Create the numbered solution title node
