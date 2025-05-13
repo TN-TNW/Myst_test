@@ -26,7 +26,7 @@ const exerciseTransform = {
 
           const label = node.label || `exercise-${exerciseCounter}`;
           const number = exerciseCounter;
-          const originalTitle = node.title || "Untitled exercise";
+          const originalTitle = node.title;
           
           labelMap.set(label, number);
 
