@@ -19,14 +19,14 @@ const exerciseTransform = {
           node.title = `Exercise ${index + 1}`;
         }
 
-        if (node.type === "solution") {
-          const label = node.label;
-          const exNum = labelMap.get(label) || "?";
+        // if (node.type === "solution") {
+        //   const label = node.label;
+        //   const exNum = labelMap.get(label) || "?";
 
-          node.type = "admonition";
-          node.kind = "tip";
-          node.title = `Solution to Exercise ${exNum}`;
-        }
+        //   node.type = "admonition";
+        //   node.kind = "tip";
+        //   node.title = `Solution to Exercise ${exNum}`;
+        // }
       });
     }
   },
