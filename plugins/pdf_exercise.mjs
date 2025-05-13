@@ -2,7 +2,7 @@ const exerciseTransform = {
   name: "conditional-exercise",
   doc: "Replace exercises and solutions in PDF builds.",
   stage: "document",
-  plugin: (opts, utils) => (tree) => {
+  plugin: (opts) => (tree) => {
     const isPDF = process.argv.some(arg => arg.includes("pdf"));
     const labelMap = new Map();
 
