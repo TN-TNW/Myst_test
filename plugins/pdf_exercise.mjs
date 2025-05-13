@@ -26,7 +26,7 @@ const exerciseTransform = {
 
           const label = node.label || `exercise-${exerciseCounter}`;
           const number = exerciseCounter;
-          const originalTitle = node.title;
+
           
           labelMap.set(label, number);
 
@@ -35,7 +35,7 @@ const exerciseTransform = {
             type: "paragraph",
             children: [{
               type: "text",
-              value: `Exercise ${number}: ${originalTitle}`
+              value: `Exercise ${number}: ${node.title}`
             }]
           };
 
