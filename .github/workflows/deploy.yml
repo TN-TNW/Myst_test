@@ -74,13 +74,7 @@ jobs:
 
   
       - name: Build PDF Assets
-        run: myst build --pdf
-      - name: Check if build folder exists
-        run: |
-          if [ ! -d "_build/pdf" ]; then
-            echo "Build folder does not exist. Exiting."
-            exit 1
-          fi
+        run: myst build --pdf --debug
       - name: Build HTML Assets
         run: myst build --html
       - name: Upload artifact
