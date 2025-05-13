@@ -59,6 +59,8 @@ jobs:
             fontawesome5
             tcolorbox
             pdfcol
+            adjustbox
+
   
       - name: Build PDF Assets
         run: myst build --pdf
