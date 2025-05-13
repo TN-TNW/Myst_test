@@ -67,6 +67,11 @@ jobs:
             fancyvrb  
             nicefrac
             float
+      - name: Check for Missing Packages
+        if: failure()
+        run: |
+          echo "🔍 Checking for missing LaTeX packages..."
+          grep "File .* not found" _build/temp/*/document.log | awk -F "'" '{print $2}' | sort | uniq
 
   
       - name: Build PDF Assets
